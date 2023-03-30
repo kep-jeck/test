@@ -1,0 +1,149 @@
+// ОБЩИЕ СТИЛИ
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline: none;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $base-font-size;
+  line-height: 22px;
+  color: $black;
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+button,
+input {
+  color: inherit;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  object-fit: cover;
+}
+
+button,
+input {
+  border: none;
+  background: transparent;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+// ОБЩИЕ КЛАССЫ
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1020px;
+  padding: 20px 5px;
+  margin: 0 auto;
+
+  @include mobile() {
+    max-width: 360px;
+  }
+}
+
+.title {
+  margin: 0 0 64px;
+  @include font(56px, 700);
+  line-height: 68px;
+  color: $black;
+
+  @include mobile() {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
+}
+
+.subtitle {
+  margin: 0 0 40px;
+  @include font(44px, 700);
+  line-height: 56px;
+  color: $black;
+
+  @include mobile() {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+}
+
+.text {
+  margin: 0;
+  margin-bottom: 40px;
+
+  @include mobile() {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 30px;
+  }
+}
+
+.button {
+  display: block;
+  padding: 17px 24px;
+  margin-left: auto;
+  border-radius: 8px;
+  @include font(16px, 400);
+  color: $black;
+  background-color: $green;
+  cursor: pointer;
+  outline: none;
+  transition: background-color .3s ease-in-out;
+
+  @include mobile() {
+    margin: 0;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 10px;
+  }
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  padding: 0 5px;
+  text-decoration: none;
+  color: $green;
+}

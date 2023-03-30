@@ -1,0 +1,36 @@
+section.news
+  .news__container.container
+    h2.news__title.subtitle Пензенская область
+    p.news__text.text На базе учреждений и организаций Пензенской области, занимающихся реабилитацией и работой с детьми-инвалидами и детьми с ограниченными возможностями здоровья, будет представлен региональный инновационный опыт в сфере социального обеспечения, медицины, образования. Особое внимание будет уделено теме сопровождаемого проживания и трудоустройства, вопросам их подготовки к самостоятельной жизни и адаптации в социуме, обучении навыкам самообслуживания. Участники посетят первый в стране кластер по развитию и социализации детей и молодых людей с инвалидностью — арт-поместье «Новые берега».
+      <br><br>
+      |Также в формате открытого диалога состоится встреча уполномоченных по правам ребенка с Министром труда и социальной защиты РФ Антоном Котяковым.
+      <br><br>
+      |Съезд носит практический характер: предложения, выработанные в его ходе, будут использоваться при реализации стратегических программ Уполномоченного при Президенте РФ по правам ребенка Марии Львовой-Беловой «Сопровождение через всю жизнь» и «Дети в семье».
+      <br><br>
+      |Официальное открытие съезда и пленарное заседание пройдут в Центре культурного развития «Дом офицеров» (г. Пенза, ул. Ленинградская, 1А) 4 октября 2022 года, 10.00-11.30. По итогам заседания состоится пресс-подход — 11.30-11.45.
+
+    p.news__text.text Аккредитация:
+      a.link(href="mailto:pressa058@mail.ru") pressa058@mail.ru
+      |(заявки принимаются до 21.00 2 октября).
+
+    .news__form-container.rounded.row.align-items-center.justify-content-between
+      picture.news__img.col-md-4.col-sm-12
+        source(media="(max-width:768px)" srcset="img/news-mob-img.png")
+        img(src="img/news-desk-img.png" loading="lazy")
+
+      form.news__form.col-md-7.col-sm-12
+        h4.news__form-title Подписаться на новости
+
+        .row.align-items-center.justify-content-between
+          .col-md-6.col-sm-12.mb-3
+            label.news__label.form-label(for="name") Label
+            input.news__input.form-control(id="name" placeholder="Placeholder")
+          .col-md-6.col-sm-12.mb-3
+            label.news__label.form-label(for="e-mail") Label
+            input.news__input.form-control(id="e-mail" placeholder="Placeholder")
+        .mb-3
+          label.news__label.form-label(for="textarea") Label
+          textarea.news__textarea.form-control(id="textarea" placeholder="Placeholder" rows="2")
+
+        button.news__button.button Отправить
+

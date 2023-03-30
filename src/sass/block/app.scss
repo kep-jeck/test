@@ -1,0 +1,47 @@
+// ПЕРЕМЕННЫЕ
+$font-family: "GolosText", sans-serif;
+$base-font-size: 16px;
+$title-font-size: 56px;
+$subtitle-font-size: 44px;
+$black: #132141;
+$grey: #A1A6B3;
+$white: #FFFFFF;
+$blue: #0E4ACD;
+$light-blue: #F3F6FA;
+$green: #10BD99;
+
+
+// БРЕЙКПОИНТЫ
+$breakpoints: (
+  mob: 768px,
+  desk: 1300px
+);
+
+// МИКСИНЫ
+
+@mixin font-face($font-family, $url, $weight) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url("../fonts/#{$url}.woff") format("woff");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: normal;
+  }
+}
+
+@mixin font($font-size, $font-weight) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+@mixin mobile {
+  @media screen and (max-width: map-get($breakpoints, "mob")) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: map-get($breakpoints, "desk")) {
+    @content;
+  }
+}
